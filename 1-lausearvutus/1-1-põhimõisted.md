@@ -28,6 +28,63 @@ Väärad laused:
 - "x > 5" (muutujat sisaldav avaldis - tõeväärtus sõltub x väärtusest)
 - "Ma valetan praegu." (paradoksaalne lause)
 
+## Loogika alustala: põhimõisted
+
+### Algmõiste
+
+**Definitsioon:** Algmõiste on loogilise süsteemi fundamentaalne mõiste, mida võetakse kasutusele ilma formaalse definitsioonita, kuna see on intuitiivselt arusaadav ja toimib keerulisemate mõistete alustalana. Algmõisteid ei saa defineerida sama süsteemi lihtsamate terminite abil.
+
+**Näide:** Geomeetrias on "punkt" ja "sirge" algmõisted. Mõistame intuitiivselt, mida need tähendavad, kuid neid ei saa defineerida lihtsamate geomeetriliste terminite abil.
+
+**Praktiline rakendus:** Informaatikas on "bitt" (0 või 1) sageli algmõiste, millele tuginedes ehitatakse keerulisemad andmestruktuurid.
+
+### Aksioom
+
+**Definitsioon:** Aksioom on väide, mida võetakse tõesena ilma tõestuseta, toimides lähtepunktina teiste väidete (teoreemide) tuletamisel loogilise arutluse kaudu. Aksioomid moodustavad loogilise või matemaatilise süsteemi vundamendi.
+
+**Näide:** Lausearvutuses on välistatud kolmanda seadus (A ∨ ¬A) aksioom, mis väidab, et väide on kas tõene või selle eitus on tõene - kolmandat võimalust pole.
+
+**Visuaalne esitus:**
+
+```
+Loogilise süsteemi struktuur
+┌────────────────────────────────┐
+│                                │
+│  ┌─────────┐    ┌─────────┐    │
+│  │Aksioomid│    │ Alg-    │    │
+│  │         │    │ mõisted │    │
+│  └─────────┘    └─────────┘    │
+│         │            │         │
+│         v            v         │
+│     ┌───────────────────┐      │
+│     │  Definitsioonid   │      │
+│     └───────────────────┘      │
+│              │                 │
+│              v                 │
+│     ┌───────────────────┐      │
+│     │     Teoreemid     │      │
+│     └───────────────────┘      │
+│                                │
+└────────────────────────────────┘
+```
+
+### Defineerimine ja definitsioon
+
+**Defineerimine:** Defineerimine on protsess, mille käigus tutvustatakse uut mõistet või terminit, selgitades seda juba mõistetud kontseptsioonide abil.
+
+**Definitsioon:** Definitsioon on väide, mis määratleb täpselt mingi mõiste tähenduse.
+
+**Hea definitsiooni struktuur:**
+1. Defineeritav termin
+2. Laiem kategooria, kuhu see kuulub
+3. Eripärad, mis eristavad seda teistest sama kategooria liikmetest
+
+**Näide:** 
+- "Ruut on ristkülik (laiem kategooria), mille kõik küljed on võrdse pikkusega (eristav omadus)."
+- "Disjunktsioon on loogiline tehe (laiem kategooria), mis annab tõese tulemuse, kui vähemalt üks operandidest on tõene (eristav omadus)."
+
+**Praktiline rakendus:** Programmeerimisel järgivad funktsioonide ja andmestruktuuride defineerimine sama mustrit - nimetame üksuse, määrame selle tüübi ja kirjeldame selle konkreetset käitumist või omadusi.
+
 ## Tõeväärtus
 
 Lausearvutuses tähistame tõest lauset tähega **t** (või numbriga 1) ja väära lauset tähega **v** (või numbriga 0).
@@ -76,6 +133,56 @@ Näide tautoloogiast: "Täna on teisipäev või täna ei ole teisipäev" (X ∨ 
 **Kontradiktsioon** on lause, mis on väär kõigi võimalike komponentlausete tõeväärtuste korral. Kontradiktsiooni nimetatakse ka **samaselt vääraks lauseks**.
 
 Näide kontradiktsioonist: "Täna on teisipäev ja täna ei ole teisipäev" (X ∧ ¬X)
+
+## Teoreem
+
+**Definitsioon:** Teoreem on väide, mille tõesus on tõestatud, tuginedes aksioomidele, definitsioonidele ja varem tõestatud teoreemidele loogilise deduktiivse protsessi kaudu. Erinevalt aksioomidest vajavad teoreemid tõestust.
+
+**Näide:** Väide "Kui A-st järeldub B ja B-st järeldub C, siis A-st järeldub C" on lausearvutuse teoreem (süllogismi seadus), mida saab tõestada implikatsiooni põhiaksioomide ja definitsioonide abil.
+
+**Aksioomide, definitsioonide ja teoreemide vahelised seosed:**
+
+1. **Aksioomid** on lähtepunktid, mis võetakse vastu ilma tõestuseta
+2. **Definitsioonid** määratlevad uusi termineid, tuginedes algmõistetele või varem defineeritud terminitele
+3. **Teoreemid** on tõestatud tõed, mis on tuletatud aksioomidest ja definitsioonidest loogilise deduktsiooni abil
+
+**Praktiline näide:** 
+- **Aksioom:** Arvutisüsteemis on bitt kas 0 või 1 (välistatud kolmanda seadus bittidele rakendatuna)
+- **Definitsioon:** Bait on defineeritud kui 8 biti jada
+- **Teoreem:** Baidil on täpselt 256 (2^8) erinevat võimalikku väärtust (seda saab tõestada, kasutades aksioomi ja definitsiooni)
+
+**Teoreemi struktuuri visuaalne esitus:**
+
+```
+Teoreemi struktuur
+┌────────────────────────────────┐
+│           Teoreem              │
+├────────────────────────────────┤
+│                                │
+│  ┌──────────┐                  │
+│  │  Väide   │ → Loogiline väide│
+│  └──────────┘                  │
+│                                │
+│  ┌──────────┐                  │
+│  │ Tõestus  │ → Loogiline      │
+│  │          │   tuletamine     │
+│  └──────────┘                  │
+│     Kasutab:                   │
+│     • Aksioome                 │
+│     • Definitsioone            │
+│     • Varasemaid teoreeme      │
+│     • Järeldusreegleid         │
+│                                │
+└────────────────────────────────┘
+```
+
+## Eeldus
+
+**Definitsioon:** Eeldus on väide, mida eeldatakse olevat tõene ja mis toimib alusena järelduse tegemiseks loogilises arutluses.
+
+**Näide:** Arutluses "Kõik arvutid kasutavad elektrit; minu kalkulaator on arvuti; järelikult kasutab minu kalkulaator elektrit" on kaks esimest väidet eeldused.
+
+**Praktiline rakendus:** Programmikoodi silumisel alustavad programmeerijad sageli eeldustest süsteemi eri osade eeldatava käitumise kohta, et leida vigade asukohti.
 
 ## Kehtestatavus ja kummutatavus
 

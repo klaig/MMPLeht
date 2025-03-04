@@ -325,6 +325,38 @@ Seda saab lihtsustada:
 
 **Samaselt väär valem** (kontradiktsioon) DNK kujul on tühi disjunktsioon, mida võib märkida kui v (väär).
 
+## Normaalkujude praktiline kasutamine
+
+### Andmebaasipäringud disjunktiivsel normaalkujul
+
+**Disjunktiivse normaalkuju kasutamine andmebaasi otsingus:**
+
+Kui loome otsingufunktsiooni, mis võimaldab kasutajatel leida tooteid erinevate kriteeriumide alusel, on päring sageli disjunktiivsel normaalkujul:
+
+```sql
+-- Leia tooted, mis on:
+-- (Nutitelefonid JA alla 500€) VÕI (Sülearvutid JA SSD-ga)
+SELECT * FROM Tooted 
+WHERE (kategooria = 'Nutitelefon' AND hind < 500)
+   OR (kategooria = 'Sülearvuti' AND omadused LIKE '%SSD%')
+```
+
+See on disjunktiivsel normaalkujul, kuna tegu on konjunktsioonide (AND) disjunktsiooniga (OR).
+
+### Loogikaskeemide disainimine
+
+**Näide loogikaskeemi optimeerimisest:**
+
+Oletame, et meil on loogikaskeem, mis realiseerib valemi (P ∧ Q) ∨ (P ∧ ¬Q).
+
+Lihtsustame seda:
+1. (P ∧ Q) ∨ (P ∧ ¬Q)
+2. P ∧ (Q ∨ ¬Q) (distributiivsuse omadus)
+3. P ∧ t (Q ∨ ¬Q on tautoloogia, seega asendame selle tähisega t)
+4. P (konjunktsioon tõesega annab alati operandi enda)
+
+Seega selle asemel, et ehitada skeem, mis realiseerib (P ∧ Q) ∨ (P ∧ ¬Q), piisab lihtsast skeemist, mis väljastab sisendi P väärtuse. See vähendab oluliselt skeemi keerukust ja ressursivajadust.
+
 ## Kokkuvõte
 
 Normaalkujud on lausearvutuses olulised standardformaadid, mis võimaldavad analüüsida ja võrrelda erinevaid valemeid ühtsel viisil. Disjunktiivne normaalkuju (DNK) on konjunktsioonide disjunktsioon, konjunktiivne normaalkuju (KNK) on disjunktsioonide konjunktsioon.

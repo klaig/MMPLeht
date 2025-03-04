@@ -172,6 +172,40 @@ Samas ei ole üldjuhul samaväärsed:
 - A ⇒ B ≢ B ⇒ A (implikatsioon ja pöördlause)
 - A ⇒ B ≢ ¬A ⇒ ¬B (implikatsioon ja vastandlause)
 
+### Visuaalne ülevaade tingimuslausetest
+
+Mõistete **Pöördlause (Converse)**, **Vastandlause (Inverse)** ja **Pöördvastandlause (Contrapositive)** visuaalne esitus:
+
+```
+Implikatsiooni kohta: P → Q ("Kui P, siis Q")
+
+┌───────────────────────────────────────────┐
+│                                           │
+│  Originaalne │                           │
+│  implikatsioon│  P → Q                    │
+│               │                           │
+│  Pöördlause   │  Q → P                    │
+│               │                           │
+│  Vastandlause │  ¬P → ¬Q                  │
+│               │                           │
+│ Pöördvastand- │  ¬Q → ¬P                  │
+│     lause     │                           │
+│               │                           │
+└───────────────────────────────────────────┘
+
+Samaväärsusseosed:
+- P → Q ≡ ¬Q → ¬P (Originaal ≡ Pöördvastandlause)
+- Q → P ≡ ¬P → ¬Q (Pöördlause ≡ Vastandlause)
+```
+
+**Praktiline näide:**
+- Originaal: "Kui sajab vihma, siis pinnas saab märjaks."
+- Pöördlause: "Kui pinnas on märg, siis sadas vihma."
+- Vastandlause: "Kui ei saja vihma, siis pinnas ei saa märjaks."
+- Pöördvastandlause: "Kui pinnas ei ole märg, siis ei sadanud vihma."
+
+Pange tähele, et kuigi originaalväide ja selle pöördvastandlause on loogiliselt samaväärsed (mõlemad tõesed), võib pöördlause olla väär (pinnas võib olla märg näiteks kastmissüsteemi tõttu). See illustreerib, miks nende seoste mõistmine on loogiliseks arutluseks oluline.
+
 ## 5. Ekvivalents (⇔)
 
 Ekvivalents on loogiline tehe, mis tähendab "parajasti siis, kui" või "siis ja ainult siis, kui". Ekvivalents ühendab kaks lauset ja väljendab, et need on sama tõeväärtusega.
@@ -281,3 +315,38 @@ Mõlemad laused on antud juhul tõesed, kuna paarisarvu definitsioon ongi "arv, 
 2. Ekvivalents A ⇔ B tähendab, et A ja B on alati sama tõeväärtusega - kas mõlemad tõesed või mõlemad väärad.
 
 Näiteks väide "Kui arv jagub 4-ga, siis ta on paarisarv" on implikatsioon, mis on tõene, kuid vastav ekvivalents "Arv jagub 4-ga parajasti siis, kui ta on paarisarv" on väär, sest on olemas paarisarve (nt 2, 6, 10), mis ei jagu 4-ga.
+
+## Praktilised näited loogikatehete kasutamisest
+
+### Programmeerimisel loogikatehete kasutamine
+
+**Konjunktsiooni (JA) näide turvasüsteemis:**
+```python
+# Kasutaja pääseb failile ligi, kui:
+# 1. Tal on õige parool JA
+# 2. Ta ühendub autoriseeritud seadmest
+
+def saab_failile_ligipääsu(parool_õige, seade_autoriseeritud):
+    return parool_õige and seade_autoriseeritud  # Konjunktsioon
+
+# Tõeväärtustabel praktikas:
+# parool_õige | seade_autoriseeritud | saab_failile_ligipääsu
+# ------------+----------------------+----------------------
+#    Tõene    |        Tõene         |        Tõene
+#    Tõene    |        Väär          |        Väär
+#    Väär     |        Tõene         |        Väär
+#    Väär     |        Väär          |        Väär
+```
+
+### Implikatsiooni kasutamine reeglipõhises süsteemis
+
+**Implikatsiooni rakendamine ekspertsüsteemis:**
+
+```
+Eeldus 1: Kui patsiendil on palavik JA köha, siis võib tal olla gripp.
+Eeldus 2: Patsiendil X on palavik JA köha.
+Järeldus (kasutades Modus Ponens'it): Patsiendil X võib olla gripp.
+```
+
+See näitab, kuidas loogiline järeldamine on aluseks ekspertsüsteemidele meditsiinis, diagnostikas ja otsustustoes.
+```

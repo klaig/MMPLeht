@@ -396,6 +396,32 @@ Kui (¬P ∨ Q) ∧ (¬Q ∨ R), siis võime tuletada:
 
 See on klassikaline transitiivsuse näide: kui P ⇒ Q ja Q ⇒ R, siis P ⇒ R.
 
+## Visuaalne abimaterjal loogiliste samaväärsuste kohta
+
+Meelespea olulisimate samaväärsuste kohta lausearvutuses:
+
+```
+┌────────────────────────────────────────────────────┐
+│  Olulised loogilised samaväärsused                 │
+├────────────────────────────────────────────────────┤
+│                                                    │
+│  De Morgani seadused:                              │
+│  ¬(P ∧ Q) ≡ ¬P ∨ ¬Q                               │
+│  ¬(P ∨ Q) ≡ ¬P ∧ ¬Q                               │
+│                                                    │
+│  Distributiivsuse omadused:                        │
+│  P ∧ (Q ∨ R) ≡ (P ∧ Q) ∨ (P ∧ R)                  │
+│  P ∨ (Q ∧ R) ≡ (P ∨ Q) ∧ (P ∨ R)                  │
+│                                                    │
+│  Implikatsiooni avaldamine:                        │
+│  P → Q ≡ ¬P ∨ Q                                    │
+│                                                    │
+│  Kahekordse eituse omadus:                         │
+│  ¬¬P ≡ P                                          │
+│                                                    │
+└────────────────────────────────────────────────────┘
+```
+
 ## Kokkuvõte
 
 Lausearvutuse samaväärsused on võimas tööriist valemite teisendamiseks, lihtsustamiseks ja analüüsimiseks. Need võimaldavad meil:

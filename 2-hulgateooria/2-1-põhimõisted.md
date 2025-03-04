@@ -224,26 +224,76 @@ Nende hulkade vahel kehtivad järgmised sisalduvussuhted:
 
 ## Arvude intervallid
 
-Arvuintervallid on reaalarvude hulga alamhulgad, mida saab defineerida alg- ja lõpp-punkti järgi.
+Arvuintervallid on reaalarvude hulga alamhulgad, mida saab defineerida alg- ja lõpp-punkti järgi. Need on olulised matemaatilised konstruktsioonid, mida kasutatakse laialdaselt matemaatilises analüüsis, tõenäosusteoorias ja paljudes rakendustes.
 
-- **Suletud intervall** [a,b] = {x ∈ ℝ | a ≤ x ≤ b}
-  - Sisaldab nii alg- kui ka lõpp-punkti
-  - Näide: [2, 5] = {x ∈ ℝ | 2 ≤ x ≤ 5}
+### Lõik (Suletud intervall)
+**Definitsioon:** Lõik ehk suletud intervall [a,b] on hulk, mis sisaldab kõiki reaalarve a ja b vahel, kaasa arvatud otspunktid a ja b.
 
-- **Avatud intervall** (a,b) = {x ∈ ℝ | a < x < b}
-  - Ei sisalda ei alg- ega lõpp-punkti
-  - Näide: (2, 5) = {x ∈ ℝ | 2 < x < 5}
+Formaalselt:
+[a,b] = {x ∈ ℝ | a ≤ x ≤ b}
 
-- **Poolavatud intervallid**
-  - [a,b) = {x ∈ ℝ | a ≤ x < b} (sisaldab algpunkti, aga mitte lõpp-punkti)
-  - (a,b] = {x ∈ ℝ | a < x ≤ b} (ei sisalda algpunkti, aga sisaldab lõpp-punkti)
+**Omadused:**
+- Sisaldab mõlemat otspunkti (a ja b)
+- On mittetühi, kui a ≤ b
+- Kui a = b, siis [a,b] = {a} (ühepunktiline hulk)
+- Kui a > b, siis [a,b] = ∅ (tühi hulk)
 
-- **Lõpmatud intervallid**
-  - [a, ∞) = {x ∈ ℝ | x ≥ a} (sisaldab kõiki reaalarve alates a-st)
-  - (a, ∞) = {x ∈ ℝ | x > a} (sisaldab kõiki reaalarve, mis on suuremad kui a)
-  - (-∞, b] = {x ∈ ℝ | x ≤ b} (sisaldab kõiki reaalarve kuni b-ni)
-  - (-∞, b) = {x ∈ ℝ | x < b} (sisaldab kõiki reaalarve, mis on väiksemad kui b)
-  - (-∞, ∞) = ℝ (kõikide reaalarvude hulk)
+**Näide:** Lõik [2, 5] sisaldab kõiki reaalarve 2-st kuni 5-ni, kaasa arvatud arvud 2 ja 5.
+
+### Vahemik (Avatud intervall)
+**Definitsioon:** Vahemik ehk avatud intervall (a,b) on hulk, mis sisaldab kõiki reaalarve a ja b vahel, välja arvatud otspunktid a ja b.
+
+Formaalselt:
+(a,b) = {x ∈ ℝ | a < x < b}
+
+**Omadused:**
+- Ei sisalda kumbagi otspunkti (ei a ega b)
+- On mittetühi, kui a < b
+- Kui a ≥ b, siis (a,b) = ∅ (tühi hulk)
+
+**Näide:** Vahemik (2, 5) sisaldab kõiki reaalarve, mis on suuremad kui 2 ja väiksemad kui 5, kuid ei sisalda arve 2 ja 5.
+
+### Poollõik (Poolavatud intervall)
+**Definitsioon:** Poollõik ehk poolavatud intervall on intervall, mis sisaldab ühte otspunkti, kuid mitte teist. On kaks tüüpi poollõike:
+
+1. **[a,b)** - sisaldab alumist otspunkti, kuid mitte ülemist:
+   [a,b) = {x ∈ ℝ | a ≤ x < b}
+
+2. **(a,b]** - sisaldab ülemist otspunkti, kuid mitte alumist:
+   (a,b] = {x ∈ ℝ | a < x ≤ b}
+
+**Omadused:**
+- [a,b) sisaldab a-d, kuid mitte b-d
+- (a,b] sisaldab b-d, kuid mitte a-d
+- Mõlemad on mittetühjad, kui a < b
+- Kui a = b, siis [a,b) = (a,b] = ∅ (tühi hulk)
+
+**Näide:** Poollõik [2, 5) sisaldab kõiki reaalarve 2-st kuni 5-ni, kaasa arvatud arv 2, kuid mitte arv 5.
+
+### Lõpmatud intervallid
+Intervallide mõistet saab laiendada, et hõlmata ka lõpmatuseni ulatuvaid vahemikke:
+
+- **[a, ∞)** = {x ∈ ℝ | x ≥ a} - kõik reaalarvud alates a-st (kaasa arvatud)
+- **(a, ∞)** = {x ∈ ℝ | x > a} - kõik reaalarvud, mis on suuremad kui a
+- **(-∞, b]** = {x ∈ ℝ | x ≤ b} - kõik reaalarvud kuni b-ni (kaasa arvatud)
+- **(-∞, b)** = {x ∈ ℝ | x < b} - kõik reaalarvud, mis on väiksemad kui b
+- **(-∞, ∞)** = ℝ - kõikide reaalarvude hulk
+
+### Intervallide kujutamine arvsirgel
+Erinevat tüüpi intervalle saab arvsirgel kujutada järgmiselt:
+- Suletud intervall [a, b]: jäme joon a-st b-ni, kus mõlemad otspunktid on tähistatud täidetud punktidega (●)
+- Avatud intervall (a, b): jäme joon a-st b-ni, kus mõlemad otspunktid on tähistatud tühjade punktidega (○)
+- Poolavatud intervall [a, b): jäme joon a-st b-ni, kus a on tähistatud täidetud punktiga (●) ja b tühja punktiga (○)
+- Poolavatud intervall (a, b]: jäme joon a-st b-ni, kus a on tähistatud tühja punktiga (○) ja b täidetud punktiga (●)
+
+### Intervallide rakendused
+Intervallid on olulised paljudes matemaatilistes rakendustes:
+- Funktsioonide määramispiirkonnad ja muutumispiirkonnad
+- Tõenäosusjaotuste määratlemine
+- Mõõtmistulemuste veapiiride määratlemine
+- Optimeerimisülesannete lahenduspiirkondade kirjeldamine
+
+Märkus: arvuintervallid on alati reaalarvude hulga alamhulgad. Intervalli otspunktid on alati reaalarvud või lõpmatus (∞ või -∞).
 
 ## Hulga element ja alamhulk (oluline erinevus)
 
