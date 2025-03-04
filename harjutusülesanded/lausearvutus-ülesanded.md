@@ -1,41 +1,3 @@
-I'll implement the plan for restructuring your "Lausearvutus" course materials. Let me start by making sure all the required terms are properly included and then proceed with creating the separate exercise file.
-
-# Part 1: Essential Term Verification
-
-I've verified that all the terms you listed are included in the materials. Here's where each term appears or should be thoroughly explained:
-
-- **Algmõiste (Primitive concept)**: In `1-1-põhimõisted.md`
-- **Defineerimine, definitsioon (Definition)**: In `1-1-põhimõisted.md`
-- **Aksioom (Axiom)**: In `1-1-põhimõisted.md` under "Mõtlemisseadused ja lausearvutuse alused"
-- **Teoreem (Theorem)**: In various files, especially in `1-5-järeldumine.md`
-- **Eeldus (Premise)**: In `1-5-järeldumine.md`
-- **Väide (Statement)**: Throughout all files
-- **Pöördlause (Converse)**: Should be added to `1-2-tehted.md` in the implikatsiooni section
-- **Vastandlause (Inverse)**: Should be added to `1-2-tehted.md` in the implikatsiooni section
-- **Pöördvastandlause (Contrapositive)**: Should be added to `1-2-tehted.md` in the implikatsiooni section
-- **Lausearvutuse lause (Propositional sentence)**: In `1-1-põhimõisted.md`
-- **Tõeväärtus (Truth value)**: In `1-1-põhimõisted.md`
-- **Lausearvutuse tehted (Propositional operations)**: In `1-2-tehted.md`
-  - **Eitus (Negation)**
-  - **Konjunktsioon (Conjunction)**
-  - **Disjunktsioon (Disjunction)**
-  - **Implikatsioon (Implication)**
-  - **Ekvivalents (Equivalence)**
-- **Järeldumine (Inference)**: In `1-5-järeldumine.md`
-- **Valemite loogiline samaväärsus (Logical equivalence)**: In `1-4-samaväärsused.md`
-- **Lausearvutuse põhisamaväärsused (Basic propositional equivalences)**: In `1-4-samaväärsused.md`
-- **Lihtkonjunktsioon (Elementary conjunction)**: In `1-7-normaalkujud.md`
-- **Täielik lihtkonjunktsioon (Complete elementary conjunction)**: In `1-7-normaalkujud.md`
-- **Valemi disjunktiivne normaalkuju (Disjunctive normal form)**: In `1-7-normaalkujud.md`
-- **Täielik disjunktiivne normaalkuju (Complete disjunctive normal form)**: In `1-7-normaalkujud.md`
-
-I noticed that **pöördlause**, **vastandlause**, and **pöördvastandlause** could be explained more explicitly in the materials.
-
-# Part 2: Creating the Exercise File
-
-I'll now extract all the "Harjutusülesanded" sections and their solutions to create a dedicated exercise file. Here's what this file would look like:
-
-```markdown
 # Lausearvutuse harjutusülesanded
 
 Selles failis on koondatud kõik lausearvutuse teemade harjutusülesanded koos lahendustega. Ülesanded on grupeeritud teemade kaupa.
@@ -45,17 +7,17 @@ Selles failis on koondatud kõik lausearvutuse teemade harjutusülesanded koos l
 ### Ülesanne 1.1
 Määra, millised järgmistest on lausearvutuse laused. Põhjenda oma vastust.
    a. "Arv π on irratsionaalne."
-   b. "Osta mulle piimaa."
+   b. "Osta mulle piima."
    c. "Kui arv on paarisarv, siis ta jagub 2-ga."
    d. "Mis on sinu nimi?"
    e. "f(x) = x² + 2x - 3"
 
 **Vastused:**
-   a. On lause (tõene)
-   b. Ei ole lause (käsklus)
-   c. On lause (tõene)
-   d. Ei ole lause (küsimus)
-   e. Ei ole lause (avaldis muutujaga)
+   a. On lause (tõene), sest sellel on kindel tõeväärtus.
+   b. Ei ole lause (käsklus), sest käsklusel pole tõeväärtust.
+   c. On lause (tõene), sest sellel on kindel tõeväärtus.
+   d. Ei ole lause (küsimus), sest küsimusel pole tõeväärtust.
+   e. Ei ole lause (avaldis muutujaga), sest selle tõeväärtus sõltub muutuja x väärtusest.
 
 ### Ülesanne 1.2
 Otsusta, millised järgmistest lausetest on tõesed ja millised väärad:
@@ -65,10 +27,10 @@ Otsusta, millised järgmistest lausetest on tõesed ja millised väärad:
    d. "2 + 2 = 4 ja Tallinn on Läti pealinn."
 
 **Vastused:**
-   a. Väär (v), sest 17 on paaritu arv
-   b. Tõene (t), sest väär eeldus teeb implikatsiooni tõeseks
-   c. Tõene (t), sest vähemalt üks osa on tõene
-   d. Väär (v), sest üks osa on väär
+   a. Väär (v), sest 17 on paaritu arv.
+   b. Tõene (t), sest väär eeldus teeb implikatsiooni tõeseks. Implikatsioon A ⇒ B on väär ainult siis, kui A on tõene ja B on väär.
+   c. Tõene (t), sest vähemalt üks osa (2 + 2 = 4) on tõene, seega kogu disjunktsioon on tõene.
+   d. Väär (v), sest üks osa (Tallinn on Läti pealinn) on väär, seega kogu konjunktsioon on väär.
 
 ### Ülesanne 1.3
 Määra, millised järgmistest lausetest on tautoloogiad, millised kontradiktsioonid ja millised ei kumbki:
@@ -78,10 +40,10 @@ Määra, millised järgmistest lausetest on tautoloogiad, millised kontradiktsio
    d. "Kui arv on algarv, siis ta ei jagu ühegi endast väiksema naturaalarvuga peale 1."
 
 **Vastused:**
-   a. Tautoloogia (vorm A ∨ ¬A)
-   b. Tautoloogia (vorm A ⇒ (A ∨ B))
-   c. Kontradiktsioon (sest sisaldab A ∧ ¬A)
-   d. Tautoloogia (algarvu definitsioon)
+   a. Tautoloogia (vorm A ∨ ¬A), sest see on tõene iga võimaliku tõeväärtuse korral.
+   b. Tautoloogia (vorm A ⇒ (A ∨ B)), sest see on tõene iga võimaliku tõeväärtuse korral.
+   c. Kontradiktsioon (sest sisaldab A ∧ ¬A), sest see on väär iga võimaliku tõeväärtuse korral.
+   d. Tautoloogia (algarvu definitsioon), sest see on tõene iga võimaliku tõeväärtuse korral.
 
 ## 2. Tehted
 
@@ -164,7 +126,7 @@ Valem on tautoloogia, sest valemi veerus on ainult tõesed väärtused.
 | v | t | v     | t     | t             |
 | v | v | v     | v     | t             |
 
-Valem on tautoloogia.
+Valem on tautoloogia, sest valemi veerus on ainult tõesed väärtused.
 
 **Lahendus c:**
 
@@ -179,7 +141,7 @@ Valem on tautoloogia.
 | v | v | t | t     | t     | t                 | t     | t                              |
 | v | v | v | t     | t     | t                 | t     | t                              |
 
-Valem on tautoloogia.
+Valem on tautoloogia, sest valemi veerus on ainult tõesed väärtused.
 
 ### Ülesanne 3.3
 Kontrollige tõeväärtustabeli abil, kas valemist X ⇒ Y järeldub valem ¬X ∨ Y.
@@ -193,9 +155,7 @@ Kontrollige tõeväärtustabeli abil, kas valemist X ⇒ Y järeldub valem ¬X �
 | v | t | t     | t   | t       |
 | v | v | t     | t   | t       |
 
-Näeme, et igal real, kus X ⇒ Y on tõene (read 1, 3, 4), on ka ¬X ∨ Y tõene. Seega valemist X ⇒ Y järeldub valem ¬X ∨ Y.
-
-Tegelikult need valemid on samaväärsed, mida näitab asjaolu, et nende tõeväärtustabelid on identsed.
+Näeme, et igal real, kus X ⇒ Y on tõene (read 1, 3, 4), on ka ¬X ∨ Y tõene. Kuna aga teisel real mõlemad valemid on väärad, siis valemite tõeväärtustabelid on identsed. Seega valemist X ⇒ Y järeldub valem ¬X ∨ Y, ning tegelikult need valemid on samaväärsed.
 
 ### Ülesanne 3.4
 Ülesandepüstitus: Sissepääsukontrolli süsteemis on järgmised tingimused:
@@ -406,17 +366,17 @@ Teisendage valem (P ⇔ Q) ⇒ (P ∨ Q) disjunktiivsele normaalkujule.
 1. (P ⇔ Q) ⇒ (P ∨ Q)
 2. ¬(P ⇔ Q) ∨ (P ∨ Q) (implikatsiooni eemaldamine)
 3. ¬((P ⇒ Q) ∧ (Q ⇒ P)) ∨ (P ∨ Q) (ekvivalentsi eemaldamine)
-4. ¬(¬P ∨ Q) ∨ ¬(¬Q ∨ P) ∨ P ∨ Q (implikatsiooni eemaldamine ja De Morgani seadus konjunktsioonile)
-5. (¬¬P ∧ ¬Q) ∨ (¬¬Q ∧ ¬P) ∨ P ∨ Q (De Morgani seadus disjunktsioonile)
-6. (P ∧ ¬Q) ∨ (Q ∧ ¬P) ∨ P ∨ Q (kahekordse eituse eemaldamine)
+4. (¬(P ⇒ Q) ∨ ¬(Q ⇒ P)) ∨ (P ∨ Q) (De Morgani seadus konjunktsioonile)
+5. (¬(¬P ∨ Q) ∨ ¬(¬Q ∨ P)) ∨ (P ∨ Q) (implikatsiooni eemaldamine)
+6. ((¬¬P ∧ ¬Q) ∨ (¬¬Q ∧ ¬P)) ∨ (P ∨ Q) (De Morgani seadus disjunktsioonile)
+7. ((P ∧ ¬Q) ∨ (Q ∧ ¬P)) ∨ (P ∨ Q) (kahekordse eituse eemaldamine)
 
 Lihtsustame edasi:
-7. (P ∧ ¬Q) ∨ (Q ∧ ¬P) ∨ ((P ∨ Q) ∧ t) (disjunktsiooni triviaalne teisendamine)
-8. (P ∧ ¬Q) ∨ (Q ∧ ¬P) ∨ (P ∨ Q) (konjunktsioon tõesega)
+8. (P ∧ ¬Q) ∨ (Q ∧ ¬P) ∨ P ∨ Q
+9. (P ∧ ¬Q) ∨ (Q ∧ ¬P) ∨ (P ∧ Q) ∨ (P ∧ ¬Q) ∨ (Q ∧ ¬P) ∨ (Q ∧ P)
+10. (P ∧ Q) ∨ (P ∧ ¬Q) ∨ (Q ∧ ¬P)
 
-Märkame, et (P ∧ ¬Q) ∨ (Q ∧ ¬P) ∨ (P ∨ Q) = t (tautoloogia), sest iga P ja Q väärtuste kombinatsiooni korral on vähemalt üks liige tõene.
-
-Seega, (P ⇔ Q) ⇒ (P ∨ Q) ≡ t, mis on triviaalne disjunktiivne normaalkuju.
+See on disjunktiivne normaalkuju.
 
 ### Ülesanne 6.3
 Teisendage valem P ⇒ (Q ⇒ R) nii, et see sisaldaks ainult ühte implikatsiooni.
@@ -430,7 +390,7 @@ Teisendage valem P ⇒ (Q ⇒ R) nii, et see sisaldaks ainult ühte implikatsioo
 6. ¬(P ∧ Q) ∨ R (De Morgani seadus)
 7. (P ∧ Q) ⇒ R (implikatsiooni taastamine)
 
-Seega, P ⇒ (Q ⇒ R) ≡ (P ∧ Q) ⇒ R.
+Seega, P⇒ (Q ⇒ R) ≡ (P ∧ Q) ⇒ R.
 
 ## 7. Normaalkujud
 
@@ -447,13 +407,13 @@ Viige valem X ⇒ (Y ∨ Z) täielikule disjunktiivsele normaalkujule.
    
    See on juba disjunktiivsel normaalkujul, kuid mitte täielikul.
 
-3. Täieliku disjunktiivse normaalkuju jaoks peame moodustama disjunktsiooni, kus iga liige on täielik lihtkonjunktsioon.
+3. Täieliku disjunktiivse normaalkuju jaoks peame moodustama disjunktsiooni, kus iga liige on täielik lihtkonjunktsioon (sisaldab kõiki muutujaid kas eitatuna või ilma eituseta).
 
    ¬X ∨ Y ∨ Z ≡ 
    (¬X ∧ Y ∧ Z) ∨ (¬X ∧ Y ∧ ¬Z) ∨ (¬X ∧ ¬Y ∧ Z) ∨ (¬X ∧ ¬Y ∧ ¬Z) ∨ 
    (X ∧ Y ∧ Z) ∨ (X ∧ Y ∧ ¬Z) ∨ (X ∧ ¬Y ∧ Z)
 
-4. Võime kontrollida tõeväärtustabeliga, et see on õige:
+4. Kontrollime tõeväärtustabeliga:
 
    | X | Y | Z | X ⇒ (Y ∨ Z) |
    |---|---|---|-------------|
@@ -466,7 +426,10 @@ Viige valem X ⇒ (Y ∨ Z) täielikule disjunktiivsele normaalkujule.
    | v | v | t | t           |
    | v | v | v | t           |
 
-   Valemi tõeväärtus on väär ainult reas X = t, Y = v, Z = v. Seega kõik teised väärtustekombinatsioonid moodustavad TDNK.
+   Valemi tõeväärtus on väär ainult reas X = t, Y = v, Z = v. Seega täielik disjunktiivne normaalkuju on:
+   
+   (¬X ∧ Y ∧ Z) ∨ (¬X ∧ Y ∧ ¬Z) ∨ (¬X ∧ ¬Y ∧ Z) ∨ (¬X ∧ ¬Y ∧ ¬Z) ∨ 
+   (X ∧ Y ∧ Z) ∨ (X ∧ Y ∧ ¬Z) ∨ (X ∧ ¬Y ∧ Z)
 
 ### Ülesanne 7.2
 Viige valem (X ∧ Y) ∨ (¬X ∧ Z) täielikule konjunktiivsele normaalkujule.
@@ -490,10 +453,10 @@ Viige valem (X ∧ Y) ∨ (¬X ∧ Z) täielikule konjunktiivsele normaalkujule.
 
 3. Valemi tõeväärtus on väär ridades 3, 4, 6, 8. Moodustame iga rea jaoks täieliku lihtdisjunktsiooni, kus eitame literaale, mis on tõesed, ja jätame eitamata literaalid, mis on väärad:
 
-   - (¬X ∨ Y ∨ ¬Z) (rida 3)
-   - (¬X ∨ Y ∨ Z) (rida 4)
-   - (X ∨ ¬Y ∨ Z) (rida 6)
-   - (X ∨ Y ∨ Z) (rida 8)
+   - (¬X ∨ Y ∨ ¬Z) (rida 3: X = t, Y = v, Z = t)
+   - (¬X ∨ Y ∨ Z) (rida 4: X = t, Y = v, Z = v)
+   - (X ∨ ¬Y ∨ Z) (rida 6: X = v, Y = t, Z = v)
+   - (X ∨ Y ∨ Z) (rida 8: X = v, Y = v, Z = v)
 
 4. TKNK on:
    (¬X ∨ Y ∨ ¬Z) ∧ (¬X ∨ Y ∨ Z) ∧ (X ∨ ¬Y ∨ Z) ∧ (X ∨ Y ∨ Z)
@@ -527,23 +490,26 @@ e) Iga reaalarvu ruut on mittenegatiivne.
 
 **Lahendused:**
 
-a) ∀x (T(x) → M(x)), kus 
+a) ∀x ∈ D (T(x) → M(x)), kus 
+   - D on kõigi inimeste hulk
    - T(x): "x on tudeng"
    - M(x): "x õpib matemaatikat"
 
-b) ∃x (R(x) ∧ H(x)), kus
+b) ∃x ∈ D (R(x) ∧ H(x)), kus
+   - D on kõigi asjade hulk
    - R(x): "x on raamat"
    - H(x): "x on huvitav"
 
-c) ∀x (K(x) → ¬I(x)) või ekvivalentselt ¬∃x (K(x) ∧ I(x)), kus
+c) ∀x ∈ D (K(x) → ¬I(x)) või ekvivalentselt ¬∃x ∈ D (K(x) ∧ I(x)), kus
+   - D on kõigi olendite hulk
    - K(x): "x on kass"
    - I(x): "x on inimene"
 
-d) ∀x (P(x) → J(x,2)), kus
+d) ∀x ∈ Z (P(x) → J(x,2)), kus
    - P(x): "x on paarisarv"
    - J(x,y): "x jagub y-ga"
 
-e) ∀x (x ∈ ℝ → x² ≥ 0)
+e) ∀x ∈ R (x² ≥ 0)
 
 ### Ülesanne 8.2
 Formaliseerige järgmised matemaatilised väited:
@@ -555,29 +521,32 @@ d) Iga positiivse reaalarvu jaoks leidub temast väiksem positiivne reaalarv.
 
 **Lahendused:**
 
-a) ∀x (x ∈ ℕ → x² ≥ x)
+a) ∀x ∈ N (x² ≥ x)
 
-b) ∀n (n ∈ ℕ → P(n·(n+1))), kus
+b) ∀n ∈ N (P(n·(n+1))), kus
    - P(x): "x on paarisarv"
-   Alternatiivselt: ∀n (n ∈ ℕ → ∃k (k ∈ ℕ ∧ n·(n+1) = 2k))
+   Alternatiivselt: ∀n ∈ N (∃k ∈ N (n·(n+1) = 2k))
 
-c) ∃x (x ∈ ℝ ∧ x² = 2)
+c) ∃x ∈ R (x² = 2)
 
-d) ∀x ((x ∈ ℝ ∧ x > 0) → ∃y (y ∈ ℝ ∧ 0 < y < x))
+d) ∀x ∈ R ((x > 0) → ∃y ∈ R (0 < y < x))
 
 ### Ülesanne 8.3
 Andke järgmistele predikaatarvutuse valemitele loomulik tõlge eesti keelde:
 
-a) ∀x (I(x) → ∃y (I(y) ∧ V(x,y))), kus
+a) ∀x ∈ D (I(x) → ∃y ∈ D (I(y) ∧ V(x,y))), kus
+   - D on kõigi olendite hulk
    - I(x): "x on inimene"
    - V(x,y): "x vajab y-i"
 
-b) ∀x (K(x) → (∃y (K(y) ∧ S(y,x)) ∨ ∃z (H(z) ∧ S(z,x)))), kus
+b) ∀x ∈ D (K(x) → (∃y ∈ D (K(y) ∧ S(y,x)) ∨ ∃z ∈ D (H(z) ∧ S(z,x)))), kus
+   - D on kõigi olendite hulk
    - K(x): "x on kass"
    - H(x): "x on inimene"
    - S(x,y): "x sööb y-i"
 
-c) ¬∃x (T(x) ∧ ∀y (A(y) → L(x,y))), kus
+c) ¬∃x ∈ D (T(x) ∧ ∀y ∈ D (A(y) → L(x,y))), kus
+   - D on kõigi inimeste ja õppeainete hulk
    - T(x): "x on tudeng"
    - A(y): "y on õppeaine"
    - L(x,y): "x läbis õppeaine y"
@@ -593,9 +562,9 @@ c) "Pole ühtegi tudengit, kes oleks läbinud kõik õppeained." või "Ükski tu
 ### Ülesanne 8.4
 Määrake, millised muutujad on vabad ja millised seotud järgmistes valemites:
 
-a) ∀x (P(x) → Q(x,y))
-b) ∃z (R(x,z) ∧ ∀x S(x,z))
-c) ∀x ∃y (T(x,y,z) → ∀z U(x,y,z))
+a) ∀x ∈ D (P(x) → Q(x,y))
+b) ∃z ∈ D (R(x,z) ∧ ∀x ∈ D S(x,z))
+c) ∀x ∈ D ∃y ∈ D (T(x,y,z) → ∀z ∈ D U(x,y,z))
 
 **Lahendused:**
 
@@ -608,11 +577,11 @@ c) x on seotud (üldisuskvantoriga ∀), y on seotud (olemasolukvantori ∃ pool
 ### Ülesanne 8.5
 Tõlgige järgmised predikaatarvutuse valemid tavakeelde:
 
-a) ∀x (Õpetaja(x) → ∃y (Õpilane(y) ∧ Õpetab(x, y)))
-b) ∃x (Pood(x) ∧ ∀y (Toode(y) → Müüb(x, y)))
-c) ∀x ∀y ((Sõber(x, y) ∧ Sõber(y, z)) → Sõber(x, z))
-d) ∃x ∀y ¬Armastab(y, x)
-e) ∀x ∃y (x ≠ y ∧ ∀z ((z ≠ x ∧ z ≠ y) → (Lähemal(x, z, y))))
+a) ∀x ∈ D (Õpetaja(x) → ∃y ∈ D (Õpilane(y) ∧ Õpetab(x, y)))
+b) ∃x ∈ D (Pood(x) ∧ ∀y ∈ D (Toode(y) → Müüb(x, y)))
+c) ∀x ∈ D ∀y ∈ D ((Sõber(x, y) ∧ Sõber(y, z)) → Sõber(x, z))
+d) ∃x ∈ D ∀y ∈ D ¬Armastab(y, x)
+e) ∀x ∈ D ∃y ∈ D (x ≠ y ∧ ∀z ∈ D ((z ≠ x ∧ z ≠ y) → (Lähemal(x, z, y))))
 
 **Lahendused:**
 
@@ -629,12 +598,12 @@ e) "Igal objektil x on täpselt üks lähedaim naaber y, mis on lähemal kui mis
 ### Ülesanne 8.6
 Otsustage, kas järgmised väited on tõesed või väärad, kui diskursuse universumiks on kõik reaalarvud:
 
-a) ∀x ∃y (x + y = 0)
-b) ∃y ∀x (x + y = 0)
-c) ∀x ∀y ∃z (x < z < y)
-d) ∃z ∀x ∀y (x < z < y)
-e) ∀x ∃y (y > x)
-f) ∃y ∀x (y > x)
+a) ∀x ∈ R ∃y ∈ R (x + y = 0)
+b) ∃y ∈ R ∀x ∈ R (x + y = 0)
+c) ∀x ∈ R ∀y ∈ R ∃z ∈ R (x < z < y)
+d) ∃z ∈ R ∀x ∈ R ∀y ∈ R (x < z < y)
+e) ∀x ∈ R ∃y ∈ R (y > x)
+f) ∃y ∈ R ∀x ∈ R (y > x)
 
 **Lahendused:**
 
@@ -661,24 +630,24 @@ e) Ükski kass ei oska ujuda.
 
 **Lahendused:**
 
-a) "Kõik linnud lendavad" formaliseerituna: ∀x (Lind(x) → Lendab(x))
-   Eitus: ¬(∀x (Lind(x) → Lendab(x))) ≡ ∃x (Lind(x) ∧ ¬Lendab(x))
+a) "Kõik linnud lendavad" formaliseerituna: ∀x ∈ D (Lind(x) → Lendab(x))
+   Eitus: ¬(∀x ∈ D (Lind(x) → Lendab(x))) ≡ ∃x ∈ D (Lind(x) ∧ ¬Lendab(x))
    Tõlgendus: "Leidub lind, kes ei lenda."
 
-b) "Mõned õpilased on tublid" formaliseerituna: ∃x (Õpilane(x) ∧ Tubli(x))
-   Eitus: ¬(∃x (Õpilane(x) ∧ Tubli(x))) ≡ ∀x (¬Õpilane(x) ∨ ¬Tubli(x)) ≡ ∀x (Õpilane(x) → ¬Tubli(x))
+b) "Mõned õpilased on tublid" formaliseerituna: ∃x ∈ D (Õpilane(x) ∧ Tubli(x))
+   Eitus: ¬(∃x ∈ D (Õpilane(x) ∧ Tubli(x))) ≡ ∀x ∈ D (¬Õpilane(x) ∨ ¬Tubli(x)) ≡ ∀x ∈ D (Õpilane(x) → ¬Tubli(x))
    Tõlgendus: "Ükski õpilane ei ole tubli."
 
-c) "Kõik arvud on positiivsed" formaliseerituna: ∀x (Arv(x) → Positiivne(x))
-   Eitus: ¬(∀x (Arv(x) → Positiivne(x))) ≡ ∃x (Arv(x) ∧ ¬Positiivne(x))
+c) "Kõik arvud on positiivsed" formaliseerituna: ∀x ∈ D (Arv(x) → Positiivne(x))
+   Eitus: ¬(∀x ∈ D (Arv(x) → Positiivne(x))) ≡ ∃x ∈ D (Arv(x) ∧ ¬Positiivne(x))
    Tõlgendus: "Leidub arv, mis ei ole positiivne."
 
-d) "Mõnel inimesel on sinine auto" formaliseerituna: ∃x (Inimene(x) ∧ OmabSinistAutot(x))
-   Eitus: ¬(∃x (Inimene(x) ∧ OmabSinistAutot(x))) ≡ ∀x (¬Inimene(x) ∨ ¬OmabSinistAutot(x)) ≡ ∀x (Inimene(x) → ¬OmabSinistAutot(x))
+d) "Mõnel inimesel on sinine auto" formaliseerituna: ∃x ∈ D (Inimene(x) ∧ OmabSinistAutot(x))
+   Eitus: ¬(∃x ∈ D (Inimene(x) ∧ OmabSinistAutot(x))) ≡ ∀x ∈ D (¬Inimene(x) ∨ ¬OmabSinistAutot(x)) ≡ ∀x ∈ D (Inimene(x) → ¬OmabSinistAutot(x))
    Tõlgendus: "Ühelgi inimesel pole sinist autot."
 
-e) "Ükski kass ei oska ujuda" formaliseerituna: ∀x (Kass(x) → ¬OskabUjuda(x))
-   Eitus: ¬(∀x (Kass(x) → ¬OskabUjuda(x))) ≡ ∃x (Kass(x) ∧ ¬¬OskabUjuda(x)) ≡ ∃x (Kass(x) ∧ OskabUjuda(x))
+e) "Ükski kass ei oska ujuda" formaliseerituna: ∀x ∈ D (Kass(x) → ¬OskabUjuda(x))
+   Eitus: ¬(∀x ∈ D (Kass(x) → ¬OskabUjuda(x))) ≡ ∃x ∈ D (Kass(x) ∧ ¬¬OskabUjuda(x)) ≡ ∃x ∈ D (Kass(x) ∧ OskabUjuda(x))
    Tõlgendus: "Leidub kass, kes oskab ujuda."
 
 ### Ülesanne 8.8
@@ -691,18 +660,18 @@ d) Leidub selline reaalarvude jada, mis läheneb igale reaalarvule.
 
 **Lahendused:**
 
-a) "Iga inimese kohta leidub raamat, mida ta on lugenud" formaliseerituna: ∀x (Inimene(x) → ∃y (Raamat(y) ∧ OnLugenud(x,y)))
-   Eitus: ¬(∀x (Inimene(x) → ∃y (Raamat(y) ∧ OnLugenud(x,y)))) ≡ ∃x (Inimene(x) ∧ ¬(∃y (Raamat(y) ∧ OnLugenud(x,y)))) ≡ ∃x (Inimene(x) ∧ ∀y (¬Raamat(y) ∨ ¬OnLugenud(x,y))) ≡ ∃x (Inimene(x) ∧ ∀y (Raamat(y) → ¬OnLugenud(x,y)))
+a) "Iga inimese kohta leidub raamat, mida ta on lugenud" formaliseerituna: ∀x ∈ D (Inimene(x) → ∃y ∈ D (Raamat(y) ∧ OnLugenud(x,y)))
+   Eitus: ¬(∀x ∈ D (Inimene(x) → ∃y ∈ D (Raamat(y) ∧ OnLugenud(x,y)))) ≡ ∃x ∈ D (Inimene(x) ∧ ¬(∃y ∈ D (Raamat(y) ∧ OnLugenud(x,y)))) ≡ ∃x ∈ D (Inimene(x) ∧ ∀y ∈ D (¬Raamat(y) ∨ ¬OnLugenud(x,y))) ≡ ∃x ∈ D (Inimene(x) ∧ ∀y ∈ D (Raamat(y) → ¬OnLugenud(x,y)))
    Tõlgendus: "Leidub inimene, kes pole lugenud ühtegi raamatut."
 
-b) "Leidub film, mida kõik on näinud" formaliseerituna: ∃x (Film(x) ∧ ∀y (Inimene(y) → OnNäinud(y,x)))
-   Eitus: ¬(∃x (Film(x) ∧ ∀y (Inimene(y) → OnNäinud(y,x)))) ≡ ∀x (¬Film(x) ∨ ¬(∀y (Inimene(y) → OnNäinud(y,x)))) ≡ ∀x (¬Film(x) ∨ ∃y (Inimene(y) ∧ ¬OnNäinud(y,x))) ≡ ∀x (Film(x) → ∃y (Inimene(y) ∧ ¬OnNäinud(y,x)))
+b) "Leidub film, mida kõik on näinud" formaliseerituna: ∃x ∈ D (Film(x) ∧ ∀y ∈ D (Inimene(y) → OnNäinud(y,x)))
+   Eitus: ¬(∃x ∈ D (Film(x) ∧ ∀y ∈ D (Inimene(y) → OnNäinud(y,x)))) ≡ ∀x ∈ D (¬Film(x) ∨ ¬(∀y ∈ D (Inimene(y) → OnNäinud(y,x)))) ≡ ∀x ∈ D (¬Film(x) ∨ ∃y ∈ D (Inimene(y) ∧ ¬OnNäinud(y,x))) ≡ ∀x ∈ D (Film(x) → ∃y ∈ D (Inimene(y) ∧ ¬OnNäinud(y,x)))
    Tõlgendus: "Iga filmi kohta leidub inimene, kes pole seda näinud."
 
-c) "Igal täisarvul on algarvuline jagaja" formaliseerituna: ∀x (Täisarv(x) ∧ x ≠ 0 → ∃y (Algarv(y) ∧ Jagab(y,x)))
-   Eitus: ¬(∀x (Täisarv(x) ∧ x ≠ 0 → ∃y (Algarv(y) ∧ Jagab(y,x)))) ≡ ∃x (Täisarv(x) ∧ x ≠ 0 ∧ ¬(∃y (Algarv(y) ∧ Jagab(y,x)))) ≡ ∃x (Täisarv(x) ∧ x ≠ 0 ∧ ∀y (¬Algarv(y) ∨ ¬Jagab(y,x))) ≡ ∃x (Täisarv(x) ∧ x ≠ 0 ∧ ∀y (Algarv(y) → ¬Jagab(y,x)))
+c) "Igal täisarvul on algarvuline jagaja" formaliseerituna: ∀x ∈ Z (x ≠ 0 → ∃y ∈ Z (Algarv(y) ∧ Jagab(y,x)))
+   Eitus: ¬(∀x ∈ Z (x ≠ 0 → ∃y ∈ Z (Algarv(y) ∧ Jagab(y,x)))) ≡ ∃x ∈ Z (x ≠ 0 ∧ ¬(∃y ∈ Z (Algarv(y) ∧ Jagab(y,x)))) ≡ ∃x ∈ Z (x ≠ 0 ∧ ∀y ∈ Z (¬Algarv(y) ∨ ¬Jagab(y,x))) ≡ ∃x ∈ Z (x ≠ 0 ∧ ∀y ∈ Z (Algarv(y) → ¬Jagab(y,x)))
    Tõlgendus: "Leidub nullist erinev täisarv, millel pole algarvulist jagajat."
 
-d) "Leidub selline reaalarvude jada, mis läheneb igale reaalarvule" formaliseerituna: ∃x (Jada(x) ∧ ∀y (Reaalarv(y) → Läheneb(x,y)))
-   Eitus: ¬(∃x (Jada(x) ∧ ∀y (Reaalarv(y) → Läheneb(x,y)))) ≡ ∀x (¬Jada(x) ∨ ¬(∀y (Reaalarv(y) → Läheneb(x,y)))) ≡ ∀x (¬Jada(x) ∨ ∃y (Reaalarv(y) ∧ ¬Läheneb(x,y))) ≡ ∀x (Jada(x) → ∃y (Reaalarv(y) ∧ ¬Läheneb(x,y)))
+d) "Leidub selline reaalarvude jada, mis läheneb igale reaalarvule" formaliseerituna: ∃x ∈ D (Jada(x) ∧ ∀y ∈ R (Läheneb(x,y)))
+   Eitus: ¬(∃x ∈ D (Jada(x) ∧ ∀y ∈ R (Läheneb(x,y)))) ≡ ∀x ∈ D (¬Jada(x) ∨ ¬(∀y ∈ R (Läheneb(x,y)))) ≡ ∀x ∈ D (¬Jada(x) ∨ ∃y ∈ R (¬Läheneb(x,y))) ≡ ∀x ∈ D (Jada(x) → ∃y ∈ R (¬Läheneb(x,y)))
    Tõlgendus: "Iga reaalarvude jada korral leidub reaalarv, millele see jada ei lähene."

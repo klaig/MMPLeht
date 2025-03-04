@@ -14,7 +14,7 @@ Kursuse põhieesmärk on arendada matemaatiliste väidete tõestuste konstrueeri
    - Tõeväärtustabelid
    - Valemite samaväärsused ja teisendamine
    - Normaalkujud
-   - [Predikaatarvutus](./1-lausearvutus/1-8-predikaatarvutus/index.md)
+   - Predikaatarvutus
 
 2. **[Hulgateooria](./2-hulgateooria/index.md)**
    - Hulkade põhimõisted
